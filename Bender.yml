@@ -1,0 +1,22 @@
+package:
+  name: udma_sdio
+  authors: 
+    - "Antonio Pullini <pullinia@iis.ee.ethz.ch>"
+    - "Jie Chen <jie.chen@greenwaves-technologies.com>"
+    - "Antoine Faravelon <antoine.faravelon@greenwaves-technologies.com>"
+    - "Florent Rotenberg <florent.rotenberg@greenwaves-technologies.com>"
+    - "Francesco Conti <f.conti@unibo.it>"
+
+dependencies:
+  udma_core: {path: "../udma_core"} # to be updated with git repo
+  common_cells: { git: "git@github.com:pulp-platform/common_cells.git", version: 1.13.1 }
+  tech_cells_generic: { git: "git@github.com:pulp-platform/tech_cells_generic.git", version: 0.1.6 }
+
+sources:
+  - rtl/sdio_crc7.sv
+  - rtl/sdio_crc16.sv
+  - rtl/sdio_txrx_cmd.sv
+  - rtl/sdio_txrx_data.sv
+  - rtl/sdio_txrx.sv
+  - rtl/udma_sdio_reg_if.sv
+  - rtl/udma_sdio_top.sv
